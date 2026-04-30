@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
@@ -10,795 +9,793 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-–ink: #0e0b07;
-–parchment: #f7f2e8;
-–warm: #f2ead8;
-–gold: #b8860b;
-–gold-light: #d4a843;
-–gold-pale: #f0dfa0;
-–rust: #7a2e1a;
-–sage: #3d5c35;
-–blue: #1a3a5c;
-–mid: #6b5a3e;
-–pale: #ede6d4;
+  --ink: #0e0b07;
+  --parchment: #f7f2e8;
+  --warm: #f2ead8;
+  --gold: #b8860b;
+  --gold-light: #d4a843;
+  --gold-pale: #f0dfa0;
+  --rust: #7a2e1a;
+  --sage: #3d5c35;
+  --blue: #1a3a5c;
+  --mid: #6b5a3e;
+  --pale: #ede6d4;
 }
 
 html { scroll-behavior: smooth; }
 
 body {
-background: var(–parchment);
-font-family: ‘Crimson Pro’, Georgia, serif;
-color: var(–ink);
-min-height: 100vh;
-overflow-x: hidden;
+  background: var(--parchment);
+  font-family: 'Crimson Pro', Georgia, serif;
+  color: var(--ink);
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
-/* –– NAV –– */
+/* ---- NAV ---- */
 nav {
-position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-background: rgba(247,242,232,0.95);
-backdrop-filter: blur(8px);
-border-bottom: 1px solid #d8cdb0;
-padding: 0 24px;
-height: 56px;
-display: flex; align-items: center; justify-content: space-between;
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(247,242,232,0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #d8cdb0;
+  padding: 0 24px;
+  height: 56px;
+  display: flex; align-items: center; justify-content: space-between;
 }
 
 .nav-brand {
-font-family: ‘Josefin Sans’, sans-serif;
-font-size: 11px;
-font-weight: 700;
-letter-spacing: 4px;
-text-transform: uppercase;
-color: var(–gold);
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
 }
 
 .nav-tabs {
-display: flex; gap: 4px;
+  display: flex; gap: 4px;
 }
 
 .nav-tab {
-font-family: ‘Josefin Sans’, sans-serif;
-font-size: 10px;
-font-weight: 600;
-letter-spacing: 2px;
-text-transform: uppercase;
-padding: 6px 14px;
-border: 1px solid transparent;
-border-radius: 2px;
-cursor: pointer;
-background: transparent;
-color: var(–mid);
-transition: all 0.2s;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  background: transparent;
+  color: var(--mid);
+  transition: all 0.2s;
 }
 
 .nav-tab.active, .nav-tab:hover {
-border-color: var(–gold);
-color: var(–gold);
-background: rgba(184,134,11,0.06);
+  border-color: var(--gold);
+  color: var(--gold);
+  background: rgba(184,134,11,0.06);
 }
 
 .lang-switch {
-display: flex; gap: 6px;
+  display: flex; gap: 6px;
 }
 
 .lang-btn {
-font-family: ‘Josefin Sans’, sans-serif;
-font-size: 10px;
-font-weight: 700;
-letter-spacing: 1px;
-padding: 5px 12px;
-border: 1px solid #c8b888;
-border-radius: 2px;
-cursor: pointer;
-background: transparent;
-color: var(–mid);
-transition: all 0.2s;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 5px 12px;
+  border: 1px solid #c8b888;
+  border-radius: 2px;
+  cursor: pointer;
+  background: transparent;
+  color: var(--mid);
+  transition: all 0.2s;
 }
 
 .lang-btn.active {
-background: var(–gold);
-border-color: var(–gold);
-color: white;
+  background: var(--gold);
+  border-color: var(--gold);
+  color: white;
 }
 
-/* –– PAGES –– */
+/* ---- PAGES ---- */
 .page { display: none; padding-top: 56px; min-height: 100vh; }
 .page.active { display: block; }
 
 /* ======= DEVOTIONAL PAGE ======= */
 #page-devotional {
-background: var(–parchment);
+  background: var(--parchment);
 }
 
 .hero {
-text-align: center;
-padding: 72px 24px 56px;
-position: relative;
-overflow: hidden;
+  text-align: center;
+  padding: 72px 24px 56px;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero::before {
-content: ‘’;
-position: absolute; inset: 0;
-background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(184,134,11,0.08) 0%, transparent 70%);
-pointer-events: none;
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(184,134,11,0.08) 0%, transparent 70%);
+  pointer-events: none;
 }
 
 .hero-ornament {
-font-family: ‘Cormorant Garamond’, serif;
-font-size: 72px;
-color: rgba(184,134,11,0.15);
-line-height: 1;
-margin-bottom: -8px;
-letter-spacing: -2px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 72px;
+  color: rgba(184,134,11,0.15);
+  line-height: 1;
+  margin-bottom: -8px;
+  letter-spacing: -2px;
 }
 
 .hero-label {
-font-family: ‘Josefin Sans’, sans-serif;
-font-size: 10px;
-font-weight: 700;
-letter-spacing: 5px;
-text-transform: uppercase;
-color: var(–gold);
-margin-bottom: 16px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
 }
 
 .hero h1 {
-font-family: ‘Cormorant Garamond’, serif;
-font-size: clamp(48px, 8vw, 80px);
-font-weight: 300;
-color: var(–ink);
-letter-spacing: -1px;
-line-height: 1;
-margin-bottom: 28px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(48px, 8vw, 80px);
+  font-weight: 300;
+  color: var(--ink);
+  letter-spacing: -1px;
+  line-height: 1;
+  margin-bottom: 28px;
 }
 
 .hero-line {
-width: 60px; height: 1px;
-background: var(–gold);
-margin: 0 auto 24px;
+  width: 60px; height: 1px;
+  background: var(--gold);
+  margin: 0 auto 24px;
 }
 
 .hero-subtitle {
-font-family: ‘Cormorant Garamond’, serif;
-font-style: italic;
-font-size: clamp(17px, 2.5vw, 21px);
-font-weight: 300;
-color: var(–mid);
-line-height: 1.7;
-max-width: 560px;
-margin: 0 auto;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: clamp(17px, 2.5vw, 21px);
+  font-weight: 300;
+  color: var(--mid);
+  line-height: 1.7;
+  max-width: 560px;
+  margin: 0 auto;
 }
 
 /* Content sections */
 .content-wrap {
-max-width: 760px;
-margin: 0 auto;
-padding: 0 24px 80px;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
 }
 
 /* 4 pillars */
 .pillars {
-display: grid;
-grid-template-columns: repeat(4, 1fr);
-gap: 12px;
-margin-bottom: 48px;
-animation: fadeUp 0.7s 0.1s ease both;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 48px;
+  animation: fadeUp 0.7s 0.1s ease both;
 }
 
 .pillar {
-background: white;
-border: 1px solid #ddd3b8;
-padding: 20px 14px;
-text-align: center;
-border-radius: 3px;
-position: relative;
-overflow: hidden;
-transition: transform 0.2s, box-shadow 0.2s;
+  background: white;
+  border: 1px solid #ddd3b8;
+  padding: 20px 14px;
+  text-align: center;
+  border-radius: 3px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .pillar:hover {
-transform: translateY(-3px);
-box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
 }
 
 .pillar::after {
-content: ‘’;
-position: absolute; bottom: 0; left: 0; right: 0;
-height: 3px;
-background: var(–gold);
+  content: '';
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--gold);
 }
 
 .pillar-num {
-font-family: ‘Cormorant Garamond’, serif;
-font-size: 32px;
-font-weight: 300;
-color: var(–gold-pale);
-line-height: 1;
-margin-bottom: 4px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  font-weight: 300;
+  color: var(--gold-pale);
+  line-height: 1;
+  margin-bottom: 4px;
 }
 
 .pillar-title {
-font-family: ‘Josefin Sans’, sans-serif;
-font-size: 9px;
-font-weight: 700;
-letter-spacing: 2px;
-text-transform: uppercase;
-color: var(–gold);
-margin-bottom: 6px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 6px;
 }
 
 .pillar-desc {
-font-family: ‘Cormorant Garamond’, serif;
-font-style: italic;
-font-size: 13px;
-color: var(–mid);
-line-height: 1.4;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 13px;
+  color: var(--mid);
+  line-height: 1.4;
 }
 
 /* Central truth */
 .central-box {
-background: var(–ink);
-color: var(–parchment);
-padding: 36px 40px;
-margin-bottom: 40px;
-position: relative;
-animation: fadeUp 0.7s 0.2s ease both;
+  background: var(--ink);
+  color: var(--parchment);
+  padding: 36px 40px;
+  margin-bottom: 40px;
+  position: relative;
+  animation: fadeUp 0.7s 0.2s ease both;
 }
 
 .central-box::before {
-content: ‘”’;
-font-family: ‘Cormorant Garamond’, serif;
-font-size: 120px;
-color: rgba(184,134,11,0.2);
-position: absolute;
-top: -10px; left: 20px;
-line-height: 1;
-pointer-events: none;
+  content: '"';
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 120px;
+  color: rgba(184,134,11,0.2);
+  position: absolute;
+  top: -10px; left: 20px;
+  line-height: 1;
+  pointer-events: none;
 }
 
 .central-box .box-label {
-font-family: ‘Josefin Sans’, sans-serif;
-font-size: 9px;
-font-weight: 700;
-letter-spacing: 3px;
-text-transform: uppercase;
-color: var(–gold-light);
-margin-bottom: 14px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-bottom: 14px;
 }
 
 .central-box p {
-font-family: ‘Cormorant Garamond’, serif;
-font-size: 20px;
-font-weight: 300;
-line-height: 1.7;
-color: #f0e8d0;
-position: relative;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: #f0e8d0;
+  position: relative;
 }
 
-.central-box strong { color: var(–gold-pale); font-weight: 600; }
+.central-box strong { color: var(--gold-pale); font-weight: 600; }
 
 /* Parable comparison */
 .section-label {
-font-family: ‘Josefin Sans’, sans-serif;
-font-size: 9px;
-font-weight: 700;
-letter-spacing: 4px;
-text-transform: uppercase;
-color: var(–mid);
-text-align: center;
-margin-bottom: 20px;
-animation: fadeUp 0.7s 0.3s ease both;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--mid);
+  text-align: center;
+  margin-bottom: 20px;
+  animation: fadeUp 0.7s 0.3s ease both;
 }
 
 .compare {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 20px;
-margin-bottom: 36px;
-animation: fadeUp 0.7s 0.35s ease both;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 36px;
+  animation: fadeUp 0.7s 0.35s ease both;
 }
 
 .c-card {
-border-radius: 3px;
-overflow: hidden;
+  border-radius: 3px;
+  overflow: hidden;
 }
 
 .c-card-head {
-padding: 16px 20px;
-display: flex; align-items: center; gap: 12px;
+  padding: 16px 20px;
+  display: flex; align-items: center; gap: 12px;
 }
 
-.pharisee .c-card-head { background: var(–rust); }
-.collector .c-card-head { background: var(–sage); }
+.pharisee .c-card-head { background: var(--rust); }
+.collector .c-card-head { background: var(--sage); }
 
 .c-icon {
-width: 36px; height: 36px;
-border-radius: 50%;
-background: rgba(255,255,255,0.2);
-display: flex; align-items: center; justify-content: center;
-font-size: 18px;
-flex-shrink: 0;
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
 }
 
 .c-card-head-text { color: white; }
 
 .c-card-head-text .c-role {
-font-family: ‘Josefin Sans’, sans-serif;
-font-size: 8px;
-font-weight: 700;
-letter-spacing: 2px;
-text-transform: uppercase;
-opacity: 0.8;
-margin-bottom: 2px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.8;
+  margin-bottom: 2px;
 }
 
 .c-card-head-text .c-name {
-font-family: ‘Cormorant Garamond’, serif;
-font-size: 18px;
-font-weight: 600;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .c-card-body {
-background: white;
-border: 1px solid #ddd3b8;
-border-top: none;
-padding: 18px 20px;
+  background: white;
+  border: 1px solid #ddd3b8;
+  border-top: none;
+  padding: 18px 20px;
 }
 
 .c-quote {
-font-family: ‘Cormorant Garamond’, serif;
-font-style: italic;
-font-size: 14px;
-line-height: 1.6;
-padding: 12px 14px;
-border-radius: 2px;
-margin-bottom: 14px;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 14px;
+  line-height: 1.6;
+  padding: 12px 14px;
+  border-radius: 2px;
+  margin-bottom: 14px;
 }
 
-.pharisee .c-quote { background: #fdf0ec; color: #5a1a08; border-left: 3px solid var(–rust); }
-.collector .c-quote { background: #edf5ec; color: #1a3a18; border-left: 3px solid var(–sage); }
+.pharisee .c-quote { background: #fdf0ec; color: #5a1a08; border-left: 3px solid var(--rust); }
+.collector .c-quote { background: #edf5ec; color: #1a3a18; border-left: 3px solid var(--sage); }
 
 .c-traits { list-style: none; }
 .c-traits li {
-font-size: 13.5px;
-padding: 5px 0 5px 20px;
-position: relative;
-color: var(–ink);
-border-bottom: 1px solid #f0e8d8;
+  font-size: 13.5px;
+  padding: 5px 0 5px 20px;
+  position: relative;
+  color: var(--ink);
+  border-bottom: 1px solid #f0e8d8;
 }
 .c-traits li:last-child { border-bottom: none; }
-.pharisee .c-traits li::before { content: ‘✗’; position: absolute; left: 0; color: var(–rust); font-size: 11px; top: 6px; }
-.collector .c-traits li::before { content: ‘✓’; position: absolute; left: 0; color: var(–sage); font-size: 11px; top: 6px; }
+.pharisee .c-traits li::before { content: '✗'; position: absolute; left: 0; color: var(--rust); font-size: 11px; top: 6px; }
+.collector .c-traits li::before { content: '✓'; position: absolute; left: 0; color: var(--sage); font-size: 11px; top: 6px; }
 
 .c-verdict {
-margin-top: 14px;
-padding: 8px 14px;
-border-radius: 2px;
-font-family: ‘Josefin Sans’, sans-serif;
-font-size: 10px;
-font-weight: 700;
-letter-spacing: 1.5px;
-text-transform: uppercase;
-text-align: center;
+  margin-top: 14px;
+  padding: 8px 14px;
+  border-radius: 2px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-align: center;
 }
 
-.pharisee .c-verdict { background: #fde8e0; color: var(–rust); }
-.collector .c-verdict { background: #e0f0e0; color: var(–sage); }
+.pharisee .c-verdict { background: #fde8e0; color: var(--rust); }
+.collector .c-verdict { background: #e0f0e0; color: var(--sage); }
 
 /* Arrow */
 .arrow-mid {
-text-align: center;
-margin: 4px 0 28px;
-animation: fadeUp 0.7s 0.4s ease both;
+  text-align: center;
+  margin: 4px 0 28px;
+  animation: fadeUp 0.7s 0.4s ease both;
 }
 
 .arrow-mid span {
-font-family: ‘Josefin Sans’, sans-serif;
-font-size: 9px;
-font-weight: 700;
-letter-spacing: 3px;
-text-transform: uppercase;
-color: #b0a080;
-display: block;
-margin-bottom: 4px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #b0a080;
+  display: block;
+  margin-bottom: 4px;
 }
 
-.arrow-mid .arr { font-size: 20px; color: var(–gold); }
+.arrow-mid .arr { font-size: 20px; color: var(--gold); }
 
 /* Two prayer types */
 .prayer-types {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 16px;
-margin-bottom: 40px;
-animation: fadeUp 0.7s 0.45s ease both;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 40px;
+  animation: fadeUp 0.7s 0.45s ease both;
 }
 
 .pt-card {
-padding: 22px 20px;
-border-radius: 3px;
+  padding: 22px 20px;
+  border-radius: 3px;
 }
 
 .pt-card.false-prayer {
-background: #fdf5ee;
-border: 1px solid #d4956a;
+  background: #fdf5ee;
+  border: 1px solid #d4956a;
 }
 
 .pt-card.true-prayer {
-background: #eef4fd;
-border: 1px solid #5a80b0;
+  background: #eef4fd;
+  border: 1px solid #5a80b0;
 }
 
 .pt-label {
-font-family: ‘Josefin Sans’, sans-serif;
-font-size: 9px;
-font-weight: 700;
-letter-spacing: 3px;
-text-transform: uppercase;
-margin-bottom: 8px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
 }
 
 .false-prayer .pt-label { color: #a05020; }
-.true-prayer .pt-label { color: var(–blue); }
+.true-prayer .pt-label { color: var(--blue); }
 
 .pt-title {
-font-family: ‘Cormorant Garamond’, serif;
-font-size: 20px;
-font-weight: 600;
-margin-bottom: 12px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
 }
 
 .false-prayer .pt-title { color: #6a2810; }
 .true-prayer .pt-title { color: #102840; }
 
 .pt-items {
-font-size: 13.5px;
-line-height: 1.9;
-color: #444;
+  font-size: 13.5px;
+  line-height: 1.9;
+  color: #444;
 }
 
 /* Grace banner */
 .grace-banner {
-background: linear-gradient(135deg, #c9922a 0%, #8a5a08 100%);
-padding: 32px 36px;
-border-radius: 3px;
-text-align: center;
-margin-bottom: 36px;
-animation: fadeUp 0.7s 0.5s ease both;
+  background: linear-gradient(135deg, #c9922a 0%, #8a5a08 100%);
+  padding: 32px 36px;
+  border-radius: 3px;
+  text-align: center;
+  margin-bottom: 36px;
+  animation: fadeUp 0.7s 0.5s ease both;
 }
 
 .grace-banner .gb-label {
-font-family: ‘Josefin Sans’, sans-serif;
-font-size: 9px;
-font-weight: 700;
-letter-spacing: 4px;
-text-transform: uppercase;
-color: rgba(255,255,255,0.7);
-margin-bottom: 12px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 12px;
 }
 
 .grace-banner p {
-font-family: ‘Cormorant Garamond’, serif;
-font-size: 20px;
-font-style: italic;
-color: white;
-line-height: 1.7;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-style: italic;
+  color: white;
+  line-height: 1.7;
 }
 
 /* Bible button */
 .bible-btn-wrap {
-text-align: center;
-margin-bottom: 20px;
-animation: fadeUp 0.7s 0.55s ease both;
+  text-align: center;
+  margin-bottom: 20px;
+  animation: fadeUp 0.7s 0.55s ease both;
 }
 
 .bible-btn {
-display: inline-flex;
-align-items: center;
-gap: 10px;
-font-family: ‘Josefin Sans’, sans-serif;
-font-size: 11px;
-font-weight: 700;
-letter-spacing: 3px;
-text-transform: uppercase;
-color: var(–ink);
-background: white;
-border: 2px solid var(–gold);
-padding: 14px 32px;
-border-radius: 2px;
-cursor: pointer;
-transition: all 0.25s;
-box-shadow: 4px 4px 0 var(–gold-pale);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: white;
+  border: 2px solid var(--gold);
+  padding: 14px 32px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.25s;
+  box-shadow: 4px 4px 0 var(--gold-pale);
 }
 
 .bible-btn:hover {
-background: var(–gold);
-color: white;
-box-shadow: 4px 4px 0 #8a5a08;
-transform: translate(-1px, -1px);
+  background: var(--gold);
+  color: white;
+  box-shadow: 4px 4px 0 #8a5a08;
+  transform: translate(-1px, -1px);
 }
 
 .bible-btn .btn-icon { font-size: 18px; }
 
 .ref-note {
-font-family: ‘Cormorant Garamond’, serif;
-font-style: italic;
-font-size: 13px;
-color: var(–mid);
-text-align: center;
-margin-top: 10px;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 13px;
+  color: var(--mid);
+  text-align: center;
+  margin-top: 10px;
 }
 
 /* ======= BIBLE PAGE ======= */
 #page-bible {
-background: #faf6ee;
+  background: #faf6ee;
 }
 
 .bible-hero {
-background: var(–ink);
-padding: 64px 24px 48px;
-text-align: center;
-position: relative;
-overflow: hidden;
+  background: var(--ink);
+  padding: 64px 24px 48px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .bible-hero::before {
-content: ‘✦’;
-font-size: 200px;
-color: rgba(184,134,11,0.06);
-position: absolute;
-top: -20px; left: 50%;
-transform: translateX(-50%);
-pointer-events: none;
+  content: '✦';
+  font-size: 200px;
+  color: rgba(184,134,11,0.06);
+  position: absolute;
+  top: -20px; left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
 }
 
 .bible-hero-label {
-font-family: ‘Josefin Sans’, sans-serif;
-font-size: 9px;
-font-weight: 700;
-letter-spacing: 5px;
-text-transform: uppercase;
-color: var(–gold-light);
-margin-bottom: 14px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-bottom: 14px;
 }
 
 .bible-hero h2 {
-font-family: ‘Cormorant Garamond’, serif;
-font-size: clamp(28px, 5vw, 48px);
-font-weight: 300;
-color: white;
-margin-bottom: 12px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(28px, 5vw, 48px);
+  font-weight: 300;
+  color: white;
+  margin-bottom: 12px;
 }
 
 .bible-hero-ref {
-font-family: ‘Cormorant Garamond’, serif;
-font-style: italic;
-font-size: 18px;
-color: rgba(255,255,255,0.5);
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 18px;
+  color: rgba(255,255,255,0.5);
 }
 
 .bible-content {
-max-width: 720px;
-margin: 0 auto;
-padding: 48px 24px 80px;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
 }
 
 /* Passage box */
 .passage-box {
-background: white;
-border: 1px solid #ddd3b8;
-border-radius: 3px;
-margin-bottom: 40px;
-overflow: hidden;
-box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  background: white;
+  border: 1px solid #ddd3b8;
+  border-radius: 3px;
+  margin-bottom: 40px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
 }
 
 .passage-head {
-background: var(–warm);
-border-bottom: 1px solid #ddd3b8;
-padding: 14px 28px;
-display: flex;
-align-items: center;
-gap: 10px;
+  background: var(--warm);
+  border-bottom: 1px solid #ddd3b8;
+  padding: 14px 28px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .passage-head-label {
-font-family: ‘Josefin Sans’, sans-serif;
-font-size: 9px;
-font-weight: 700;
-letter-spacing: 3px;
-text-transform: uppercase;
-color: var(–mid);
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--mid);
 }
 
 .passage-body {
-padding: 32px 36px;
+  padding: 32px 36px;
 }
 
 .bible-text {
-font-family: ‘Cormorant Garamond’, serif;
-font-size: 17px;
-line-height: 1.9;
-color: var(–ink);
-margin-bottom: 18px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px;
+  line-height: 1.9;
+  color: var(--ink);
+  margin-bottom: 18px;
 }
 
 .bible-text .verse-num {
-font-family: ‘Josefin Sans’, sans-serif;
-font-size: 9px;
-font-weight: 700;
-color: var(–gold);
-vertical-align: super;
-margin-right: 3px;
-letter-spacing: 0;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--gold);
+  vertical-align: super;
+  margin-right: 3px;
+  letter-spacing: 0;
 }
 
 .direct-speech {
-font-style: italic;
+  font-style: italic;
 }
 
 .highlight-verse {
-background: linear-gradient(120deg, rgba(184,134,11,0.08) 0%, rgba(184,134,11,0.12) 100%);
-border-left: 3px solid var(–gold);
-padding: 14px 18px;
-border-radius: 0 3px 3px 0;
-margin: 8px 0;
+  background: linear-gradient(120deg, rgba(184,134,11,0.08) 0%, rgba(184,134,11,0.12) 100%);
+  border-left: 3px solid var(--gold);
+  padding: 14px 18px;
+  border-radius: 0 3px 3px 0;
+  margin: 8px 0;
 }
 
 /* Explanation sections */
 .explanation {
-margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 .exp-title {
-font-family: ‘Cormorant Garamond’, serif;
-font-size: 28px;
-font-weight: 600;
-color: var(–ink);
-margin-bottom: 8px;
-padding-bottom: 12px;
-border-bottom: 1px solid #ddd3b8;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 8px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #ddd3b8;
 }
 
 .exp-subtitle {
-font-family: ‘Josefin Sans’, sans-serif;
-font-size: 9px;
-font-weight: 700;
-letter-spacing: 3px;
-text-transform: uppercase;
-color: var(–gold);
-margin-bottom: 20px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
 }
 
 .exp-block {
-margin-bottom: 28px;
+  margin-bottom: 28px;
 }
 
 .exp-block-title {
-font-family: ‘Cormorant Garamond’, serif;
-font-size: 18px;
-font-weight: 600;
-color: var(–ink);
-margin-bottom: 8px;
-display: flex;
-align-items: center;
-gap: 10px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .exp-block-title .etag {
-font-family: ‘Josefin Sans’, sans-serif;
-font-size: 9px;
-font-weight: 700;
-letter-spacing: 1px;
-padding: 3px 8px;
-border-radius: 2px;
-text-transform: uppercase;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 3px 8px;
+  border-radius: 2px;
+  text-transform: uppercase;
 }
 
-.etag.pharisee { background: #fde8e0; color: var(–rust); }
-.etag.collector { background: #e0f0e0; color: var(–sage); }
+.etag.pharisee { background: #fde8e0; color: var(--rust); }
+.etag.collector { background: #e0f0e0; color: var(--sage); }
 .etag.context { background: #fff3cd; color: #7a5800; }
-.etag.meaning { background: #e8f0fe; color: var(–blue); }
+.etag.meaning { background: #e8f0fe; color: var(--blue); }
 
 .exp-body {
-font-family: ‘Crimson Pro’, serif;
-font-size: 17px;
-line-height: 1.8;
-color: #333;
+  font-family: 'Crimson Pro', serif;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #333;
 }
 
 .exp-body p { margin-bottom: 14px; }
 
 .insight-box {
-background: var(–warm);
-border: 1px solid #d8c898;
-border-radius: 3px;
-padding: 20px 24px;
-margin: 20px 0;
+  background: var(--warm);
+  border: 1px solid #d8c898;
+  border-radius: 3px;
+  padding: 20px 24px;
+  margin: 20px 0;
 }
 
 .insight-box .i-label {
-font-family: ‘Josefin Sans’, sans-serif;
-font-size: 9px;
-font-weight: 700;
-letter-spacing: 3px;
-text-transform: uppercase;
-color: var(–gold);
-margin-bottom: 8px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
 }
 
 .insight-box p {
-font-family: ‘Cormorant Garamond’, serif;
-font-style: italic;
-font-size: 17px;
-color: var(–brown, #5c3d1e);
-line-height: 1.7;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 17px;
+  color: var(--brown, #5c3d1e);
+  line-height: 1.7;
 }
 
 .back-btn-wrap {
-text-align: center;
-margin-top: 40px;
+  text-align: center;
+  margin-top: 40px;
 }
 
 .back-btn {
-display: inline-flex;
-align-items: center;
-gap: 8px;
-font-family: ‘Josefin Sans’, sans-serif;
-font-size: 10px;
-font-weight: 700;
-letter-spacing: 3px;
-text-transform: uppercase;
-color: var(–mid);
-background: transparent;
-border: 1px solid #c8b888;
-padding: 12px 28px;
-border-radius: 2px;
-cursor: pointer;
-transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--mid);
+  background: transparent;
+  border: 1px solid #c8b888;
+  padding: 12px 28px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.2s;
 }
 
 .back-btn:hover {
-border-color: var(–gold);
-color: var(–gold);
-background: rgba(184,134,11,0.04);
+  border-color: var(--gold);
+  color: var(--gold);
+  background: rgba(184,134,11,0.04);
 }
 
-/* –– ANIMATIONS –– */
+/* ---- ANIMATIONS ---- */
 @keyframes fadeUp {
-from { opacity: 0; transform: translateY(20px); }
-to   { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 @keyframes fadeDown {
-from { opacity: 0; transform: translateY(-16px); }
-to   { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(-16px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 .fade-in { animation: fadeUp 0.6s ease both; }
 
-/* –– LANGUAGE –– */
+/* ---- LANGUAGE ---- */
 .lang-pt .en { display: none; }
 .lang-en .pt { display: none; }
 
-/* –– RESPONSIVE –– */
+/* ---- RESPONSIVE ---- */
 @media (max-width: 600px) {
-.pillars { grid-template-columns: 1fr 1fr; }
-.compare { grid-template-columns: 1fr; }
-.prayer-types { grid-template-columns: 1fr; }
-.central-box { padding: 26px 22px; }
-.passage-body { padding: 22px 20px; }
-nav { padding: 0 14px; }
-.nav-brand { display: none; }
+  .pillars { grid-template-columns: 1fr 1fr; }
+  .compare { grid-template-columns: 1fr; }
+  .prayer-types { grid-template-columns: 1fr; }
+  .central-box { padding: 26px 22px; }
+  .passage-body { padding: 22px 20px; }
+  nav { padding: 0 14px; }
+  .nav-brand { display: none; }
 }
 </style>
-
 </head>
 <body class="lang-pt">
 
 <!-- NAV -->
-
 <nav>
   <div class="nav-brand">April 30</div>
   <div class="nav-tabs">
@@ -818,7 +815,6 @@ nav { padding: 0 14px; }
 </nav>
 
 <!-- ======= DEVOTIONAL PAGE ======= -->
-
 <div id="page-devotional" class="page active">
 
   <div class="hero">
@@ -840,158 +836,155 @@ nav { padding: 0 14px; }
 
   <div class="content-wrap">
 
-```
-<!-- 4 pillars -->
-<div class="pillars">
-  <div class="pillar">
-    <div class="pillar-num">01</div>
-    <div class="pillar-title"><span class="pt">Adoração</span><span class="en">Worship</span></div>
-    <div class="pillar-desc"><span class="pt">Reconhecer quem Deus é</span><span class="en">Recognizing who God is</span></div>
-  </div>
-  <div class="pillar">
-    <div class="pillar-num">02</div>
-    <div class="pillar-title"><span class="pt">Submissão</span><span class="en">Submission</span></div>
-    <div class="pillar-desc"><span class="pt">Dobrar minha vontade à Dele</span><span class="en">Bending my will to His</span></div>
-  </div>
-  <div class="pillar">
-    <div class="pillar-num">03</div>
-    <div class="pillar-title"><span class="pt">Obediência</span><span class="en">Obedience</span></div>
-    <div class="pillar-desc"><span class="pt">Responder ao chamado de Deus</span><span class="en">Responding to God's call</span></div>
-  </div>
-  <div class="pillar">
-    <div class="pillar-num">04</div>
-    <div class="pillar-title"><span class="pt">Admissão</span><span class="en">Admission</span></div>
-    <div class="pillar-desc"><span class="pt">Confessar minha total necessidade</span><span class="en">Confessing my total need</span></div>
-  </div>
-</div>
-
-<!-- Central truth -->
-<div class="central-box">
-  <div class="box-label">
-    <span class="pt">A Verdade Central</span>
-    <span class="en">The Central Truth</span>
-  </div>
-  <p>
-    <span class="pt">O coração da verdadeira oração é a <strong>confissão vertical</strong>, não o desejo horizontal. A oração destrói minha <strong>autoconfiança independente</strong> e me chama a clamar por uma ajuda que sou tentado a negar que preciso.</span>
-    <span class="en">The heart of true prayer is <strong>vertical confession</strong>, not horizontal desire. Prayer <strong>decimates my independent self-surety</strong> and calls me to cry out for the help I am so often tempted to deny I need.</span>
-  </p>
-</div>
-
-<!-- Comparison label -->
-<div class="section-label">
-  <span class="pt">Lucas 18:9–14 · Duas Orações, Dois Corações</span>
-  <span class="en">Luke 18:9–14 · Two Prayers, Two Hearts</span>
-</div>
-
-<!-- Compare cards -->
-<div class="compare">
-  <div class="c-card pharisee">
-    <div class="c-card-head">
-      <div class="c-icon">🎭</div>
-      <div class="c-card-head-text">
-        <div class="c-role"><span class="pt">O Fariseu</span><span class="en">The Pharisee</span></div>
-        <div class="c-name"><span class="pt">Autojustificado</span><span class="en">Self-righteous</span></div>
+    <!-- 4 pillars -->
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pillar-num">01</div>
+        <div class="pillar-title"><span class="pt">Adoração</span><span class="en">Worship</span></div>
+        <div class="pillar-desc"><span class="pt">Reconhecer quem Deus é</span><span class="en">Recognizing who God is</span></div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">02</div>
+        <div class="pillar-title"><span class="pt">Submissão</span><span class="en">Submission</span></div>
+        <div class="pillar-desc"><span class="pt">Dobrar minha vontade à Dele</span><span class="en">Bending my will to His</span></div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">03</div>
+        <div class="pillar-title"><span class="pt">Obediência</span><span class="en">Obedience</span></div>
+        <div class="pillar-desc"><span class="pt">Responder ao chamado de Deus</span><span class="en">Responding to God's call</span></div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">04</div>
+        <div class="pillar-title"><span class="pt">Admissão</span><span class="en">Admission</span></div>
+        <div class="pillar-desc"><span class="pt">Confessar minha total necessidade</span><span class="en">Confessing my total need</span></div>
       </div>
     </div>
-    <div class="c-card-body">
-      <div class="c-quote">
-        <span class="pt">"Deus, eu te agradeço porque não sou como os outros homens..."</span>
-        <span class="en">"God, I thank you that I am not like other men..."</span>
+
+    <!-- Central truth -->
+    <div class="central-box">
+      <div class="box-label">
+        <span class="pt">A Verdade Central</span>
+        <span class="en">The Central Truth</span>
       </div>
-      <ul class="c-traits">
-        <li><span class="pt">Confia em si mesmo</span><span class="en">Trusts in himself</span></li>
-        <li><span class="pt">Despreza os outros</span><span class="en">Treats others with contempt</span></li>
-        <li><span class="pt">Não reconhece necessidade</span><span class="en">Sees no need for mercy</span></li>
-        <li><span class="pt">Vê-se como "graduado da graça"</span><span class="en">Sees himself as a grace graduate</span></li>
-      </ul>
-      <div class="c-verdict">
-        <span class="pt">❌ Não justificado</span>
-        <span class="en">❌ Not justified</span>
+      <p>
+        <span class="pt">O coração da verdadeira oração é a <strong>confissão vertical</strong>, não o desejo horizontal. A oração destrói minha <strong>autoconfiança independente</strong> e me chama a clamar por uma ajuda que sou tentado a negar que preciso.</span>
+        <span class="en">The heart of true prayer is <strong>vertical confession</strong>, not horizontal desire. Prayer <strong>decimates my independent self-surety</strong> and calls me to cry out for the help I am so often tempted to deny I need.</span>
+      </p>
+    </div>
+
+    <!-- Comparison label -->
+    <div class="section-label">
+      <span class="pt">Lucas 18:9–14 · Duas Orações, Dois Corações</span>
+      <span class="en">Luke 18:9–14 · Two Prayers, Two Hearts</span>
+    </div>
+
+    <!-- Compare cards -->
+    <div class="compare">
+      <div class="c-card pharisee">
+        <div class="c-card-head">
+          <div class="c-icon">🎭</div>
+          <div class="c-card-head-text">
+            <div class="c-role"><span class="pt">O Fariseu</span><span class="en">The Pharisee</span></div>
+            <div class="c-name"><span class="pt">Autojustificado</span><span class="en">Self-righteous</span></div>
+          </div>
+        </div>
+        <div class="c-card-body">
+          <div class="c-quote">
+            <span class="pt">"Deus, eu te agradeço porque não sou como os outros homens..."</span>
+            <span class="en">"God, I thank you that I am not like other men..."</span>
+          </div>
+          <ul class="c-traits">
+            <li><span class="pt">Confia em si mesmo</span><span class="en">Trusts in himself</span></li>
+            <li><span class="pt">Despreza os outros</span><span class="en">Treats others with contempt</span></li>
+            <li><span class="pt">Não reconhece necessidade</span><span class="en">Sees no need for mercy</span></li>
+            <li><span class="pt">Vê-se como "graduado da graça"</span><span class="en">Sees himself as a grace graduate</span></li>
+          </ul>
+          <div class="c-verdict">
+            <span class="pt">❌ Não justificado</span>
+            <span class="en">❌ Not justified</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="c-card collector">
+        <div class="c-card-head">
+          <div class="c-icon">🙏</div>
+          <div class="c-card-head-text">
+            <div class="c-role"><span class="pt">O Cobrador de Impostos</span><span class="en">The Tax Collector</span></div>
+            <div class="c-name"><span class="pt">Humilde</span><span class="en">Humble</span></div>
+          </div>
+        </div>
+        <div class="c-card-body">
+          <div class="c-quote">
+            <span class="pt">"Deus, tem misericórdia de mim, que sou pecador!"</span>
+            <span class="en">"God, be merciful to me, a sinner!"</span>
+          </div>
+          <ul class="c-traits">
+            <li><span class="pt">Reconhece sua condição</span><span class="en">Owns his condition</span></li>
+            <li><span class="pt">Abraça sua necessidade</span><span class="en">Embraces his need</span></li>
+            <li><span class="pt">Clama por misericórdia</span><span class="en">Cries out for mercy</span></li>
+            <li><span class="pt">Se humilha diante de Deus</span><span class="en">Humbles himself before God</span></li>
+          </ul>
+          <div class="c-verdict">
+            <span class="pt">✅ Justificado</span>
+            <span class="en">✅ Justified</span>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="c-card collector">
-    <div class="c-card-head">
-      <div class="c-icon">🙏</div>
-      <div class="c-card-head-text">
-        <div class="c-role"><span class="pt">O Cobrador de Impostos</span><span class="en">The Tax Collector</span></div>
-        <div class="c-name"><span class="pt">Humilde</span><span class="en">Humble</span></div>
+    <!-- Arrow -->
+    <div class="arrow-mid">
+      <span><span class="pt">Isso revela dois tipos de oração</span><span class="en">This reveals two kinds of prayer</span></span>
+      <div class="arr">↓</div>
+    </div>
+
+    <!-- Prayer types -->
+    <div class="prayer-types">
+      <div class="pt-card false-prayer">
+        <div class="pt-label"><span class="pt">Oração Falsa</span><span class="en">False Prayer</span></div>
+        <div class="pt-title"><span class="pt">Lista de compras horizontal</span><span class="en">A horizontal grocery list</span></div>
+        <div class="pt-items">
+          <span class="pt">Focada no que eu quero<br>Recitação religiosa vazia<br>Baseada em autossuficiência<br>Não reconhece dependência<br>Rebaixa a graça de Deus</span>
+          <span class="en">Focused on what I want<br>Empty religious recitation<br>Based on self-sufficiency<br>Denies true dependence<br>Demeans God's sacrifice</span>
+        </div>
+      </div>
+      <div class="pt-card true-prayer">
+        <div class="pt-label"><span class="pt">Oração Verdadeira</span><span class="en">True Prayer</span></div>
+        <div class="pt-title"><span class="pt">Confissão vertical</span><span class="en">Vertical confession</span></div>
+        <div class="pt-items">
+          <span class="pt">Focada em quem Deus é<br>Reconhece minha necessidade<br>Abraça total dependência<br>Clama pela graça de Deus<br>Traz pobreza ao trono da graça</span>
+          <span class="en">Focused on who God is<br>Acknowledges my need<br>Embraces total dependence<br>Cries out for God's grace<br>Brings poverty to the throne of grace</span>
+        </div>
       </div>
     </div>
-    <div class="c-card-body">
-      <div class="c-quote">
-        <span class="pt">"Deus, tem misericórdia de mim, que sou pecador!"</span>
-        <span class="en">"God, be merciful to me, a sinner!"</span>
-      </div>
-      <ul class="c-traits">
-        <li><span class="pt">Reconhece sua condição</span><span class="en">Owns his condition</span></li>
-        <li><span class="pt">Abraça sua necessidade</span><span class="en">Embraces his need</span></li>
-        <li><span class="pt">Clama por misericórdia</span><span class="en">Cries out for mercy</span></li>
-        <li><span class="pt">Se humilha diante de Deus</span><span class="en">Humbles himself before God</span></li>
-      </ul>
-      <div class="c-verdict">
-        <span class="pt">✅ Justificado</span>
-        <span class="en">✅ Justified</span>
-      </div>
+
+    <!-- Grace banner -->
+    <div class="grace-banner">
+      <div class="gb-label"><span class="pt">O Convite</span><span class="en">The Invitation</span></div>
+      <p>
+        <span class="pt">Corra a Jesus na sua pobreza e fraqueza — Ele nunca se revolta quando você o faz, mas sempre te recebe de braços abertos de graça.</span>
+        <span class="en">Run to Jesus in your poverty and weakness — He is never revolted when you do, but always greets you with arms of grace.</span>
+      </p>
     </div>
-  </div>
-</div>
 
-<!-- Arrow -->
-<div class="arrow-mid">
-  <span><span class="pt">Isso revela dois tipos de oração</span><span class="en">This reveals two kinds of prayer</span></span>
-  <div class="arr">↓</div>
-</div>
-
-<!-- Prayer types -->
-<div class="prayer-types">
-  <div class="pt-card false-prayer">
-    <div class="pt-label"><span class="pt">Oração Falsa</span><span class="en">False Prayer</span></div>
-    <div class="pt-title"><span class="pt">Lista de compras horizontal</span><span class="en">A horizontal grocery list</span></div>
-    <div class="pt-items">
-      <span class="pt">Focada no que eu quero<br>Recitação religiosa vazia<br>Baseada em autossuficiência<br>Não reconhece dependência<br>Rebaixa a graça de Deus</span>
-      <span class="en">Focused on what I want<br>Empty religious recitation<br>Based on self-sufficiency<br>Denies true dependence<br>Demeans God's sacrifice</span>
+    <!-- Bible button -->
+    <div class="bible-btn-wrap">
+      <button class="bible-btn" onclick="showPage('bible')">
+        <span class="btn-icon">📖</span>
+        <span class="pt">Ler o Texto Bíblico Completo</span>
+        <span class="en">Read the Full Bible Passage</span>
+      </button>
+      <p class="ref-note">
+        <span class="pt">Lucas 18:9–14 · Tiago 5:13–16</span>
+        <span class="en">Luke 18:9–14 · James 5:13–16</span>
+      </p>
     </div>
-  </div>
-  <div class="pt-card true-prayer">
-    <div class="pt-label"><span class="pt">Oração Verdadeira</span><span class="en">True Prayer</span></div>
-    <div class="pt-title"><span class="pt">Confissão vertical</span><span class="en">Vertical confession</span></div>
-    <div class="pt-items">
-      <span class="pt">Focada em quem Deus é<br>Reconhece minha necessidade<br>Abraça total dependência<br>Clama pela graça de Deus<br>Traz pobreza ao trono da graça</span>
-      <span class="en">Focused on who God is<br>Acknowledges my need<br>Embraces total dependence<br>Cries out for God's grace<br>Brings poverty to the throne of grace</span>
-    </div>
-  </div>
-</div>
-
-<!-- Grace banner -->
-<div class="grace-banner">
-  <div class="gb-label"><span class="pt">O Convite</span><span class="en">The Invitation</span></div>
-  <p>
-    <span class="pt">Corra a Jesus na sua pobreza e fraqueza — Ele nunca se revolta quando você o faz, mas sempre te recebe de braços abertos de graça.</span>
-    <span class="en">Run to Jesus in your poverty and weakness — He is never revolted when you do, but always greets you with arms of grace.</span>
-  </p>
-</div>
-
-<!-- Bible button -->
-<div class="bible-btn-wrap">
-  <button class="bible-btn" onclick="showPage('bible')">
-    <span class="btn-icon">📖</span>
-    <span class="pt">Ler o Texto Bíblico Completo</span>
-    <span class="en">Read the Full Bible Passage</span>
-  </button>
-  <p class="ref-note">
-    <span class="pt">Lucas 18:9–14 · Tiago 5:13–16</span>
-    <span class="en">Luke 18:9–14 · James 5:13–16</span>
-  </p>
-</div>
-```
 
   </div>
 </div>
 
 <!-- ======= BIBLE PAGE ======= -->
-
 <div id="page-bible" class="page">
 
   <div class="bible-hero">
@@ -1011,210 +1004,208 @@ nav { padding: 0 14px; }
 
   <div class="bible-content">
 
-```
-<!-- LUKE PASSAGE -->
-<div class="passage-box fade-in">
-  <div class="passage-head">
-    <div class="passage-head-label">
-      <span class="pt">📖 Lucas 18:9–14 (NVI)</span>
-      <span class="en">📖 Luke 18:9–14 (ESV)</span>
+    <!-- LUKE PASSAGE -->
+    <div class="passage-box fade-in">
+      <div class="passage-head">
+        <div class="passage-head-label">
+          <span class="pt">📖 Lucas 18:9–14 (NVI)</span>
+          <span class="en">📖 Luke 18:9–14 (ESV)</span>
+        </div>
+      </div>
+      <div class="passage-body">
+        <div class="bible-text">
+          <span class="pt">
+            <span class="verse-num">9</span>Jesus contou esta parábola a alguns que confiavam em si mesmos por serem justos e desprezavam os outros:
+            <span class="verse-num">10</span><span class="direct-speech">"Dois homens subiram ao templo para orar, um fariseu e um cobrador de impostos. <span class="verse-num">11</span>O fariseu ficou de pé e orou assim consigo mesmo: 'Deus, eu te agradeço porque não sou como os outros homens — ladrões, injustos, adúlteros — nem mesmo como este cobrador de impostos. <span class="verse-num">12</span>Jejuo duas vezes por semana e dou o dízimo de tudo o que ganho.'</span>
+          </span>
+          <span class="en">
+            <span class="verse-num">9</span>He also told this parable to some who trusted in themselves that they were righteous, and treated others with contempt:
+            <span class="verse-num">10</span><span class="direct-speech">"Two men went up into the temple to pray, one a Pharisee and the other a tax collector. <span class="verse-num">11</span>The Pharisee, standing by himself, prayed thus: 'God, I thank you that I am not like other men, extortioners, unjust, adulterers, or even like this tax collector. <span class="verse-num">12</span>I fast twice a week; I give tithes of all that I get.'</span>
+          </span>
+        </div>
+        <div class="bible-text highlight-verse">
+          <span class="pt">
+            <span class="verse-num">13</span><span class="direct-speech">"Mas o cobrador de impostos ficou de pé à distância, nem mesmo ousava levantar os olhos para o céu, mas batia no peito, dizendo: 'Deus, tem misericórdia de mim, que sou pecador!'</span>
+          </span>
+          <span class="en">
+            <span class="verse-num">13</span><span class="direct-speech">"But the tax collector, standing far off, would not even lift up his eyes to heaven, but beat his breast, saying, 'God, be merciful to me, a sinner!'</span>
+          </span>
+        </div>
+        <div class="bible-text">
+          <span class="pt">
+            <span class="verse-num">14</span><span class="direct-speech">"Digo a vocês: este homem, e não aquele, voltou para casa justificado diante de Deus. Pois todo aquele que se exaltar será humilhado, e todo aquele que se humilhar será exaltado."</span>
+          </span>
+          <span class="en">
+            <span class="verse-num">14</span><span class="direct-speech">"I tell you, this man went down to his house justified, rather than the other. For everyone who exalts himself will be humbled, but the one who humbles himself will be exalted."</span>
+          </span>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="passage-body">
-    <div class="bible-text">
-      <span class="pt">
-        <span class="verse-num">9</span>Jesus contou esta parábola a alguns que confiavam em si mesmos por serem justos e desprezavam os outros:
-        <span class="verse-num">10</span><span class="direct-speech">"Dois homens subiram ao templo para orar, um fariseu e um cobrador de impostos. <span class="verse-num">11</span>O fariseu ficou de pé e orou assim consigo mesmo: 'Deus, eu te agradeço porque não sou como os outros homens — ladrões, injustos, adúlteros — nem mesmo como este cobrador de impostos. <span class="verse-num">12</span>Jejuo duas vezes por semana e dou o dízimo de tudo o que ganho.'</span>
-      </span>
-      <span class="en">
-        <span class="verse-num">9</span>He also told this parable to some who trusted in themselves that they were righteous, and treated others with contempt:
-        <span class="verse-num">10</span><span class="direct-speech">"Two men went up into the temple to pray, one a Pharisee and the other a tax collector. <span class="verse-num">11</span>The Pharisee, standing by himself, prayed thus: 'God, I thank you that I am not like other men, extortioners, unjust, adulterers, or even like this tax collector. <span class="verse-num">12</span>I fast twice a week; I give tithes of all that I get.'</span>
-      </span>
-    </div>
-    <div class="bible-text highlight-verse">
-      <span class="pt">
-        <span class="verse-num">13</span><span class="direct-speech">"Mas o cobrador de impostos ficou de pé à distância, nem mesmo ousava levantar os olhos para o céu, mas batia no peito, dizendo: 'Deus, tem misericórdia de mim, que sou pecador!'</span>
-      </span>
-      <span class="en">
-        <span class="verse-num">13</span><span class="direct-speech">"But the tax collector, standing far off, would not even lift up his eyes to heaven, but beat his breast, saying, 'God, be merciful to me, a sinner!'</span>
-      </span>
-    </div>
-    <div class="bible-text">
-      <span class="pt">
-        <span class="verse-num">14</span><span class="direct-speech">"Digo a vocês: este homem, e não aquele, voltou para casa justificado diante de Deus. Pois todo aquele que se exaltar será humilhado, e todo aquele que se humilhar será exaltado."</span>
-      </span>
-      <span class="en">
-        <span class="verse-num">14</span><span class="direct-speech">"I tell you, this man went down to his house justified, rather than the other. For everyone who exalts himself will be humbled, but the one who humbles himself will be exalted."</span>
-      </span>
-    </div>
-  </div>
-</div>
 
-<!-- LUKE EXPLANATION -->
-<div class="explanation fade-in">
-  <div class="exp-title">
-    <span class="pt">Entendendo Lucas 18:9–14</span>
-    <span class="en">Understanding Luke 18:9–14</span>
-  </div>
-  <div class="exp-subtitle">
-    <span class="pt">Contexto, personagens e significado</span>
-    <span class="en">Context, characters, and meaning</span>
-  </div>
+    <!-- LUKE EXPLANATION -->
+    <div class="explanation fade-in">
+      <div class="exp-title">
+        <span class="pt">Entendendo Lucas 18:9–14</span>
+        <span class="en">Understanding Luke 18:9–14</span>
+      </div>
+      <div class="exp-subtitle">
+        <span class="pt">Contexto, personagens e significado</span>
+        <span class="en">Context, characters, and meaning</span>
+      </div>
 
-  <div class="exp-block">
-    <div class="exp-block-title">
-      <span class="etag context"><span class="pt">Contexto</span><span class="en">Context</span></span>
-      <span><span class="pt">Por que Jesus contou esta parábola?</span><span class="en">Why did Jesus tell this parable?</span></span>
-    </div>
-    <div class="exp-body">
-      <p>
-        <span class="pt">Jesus dirigiu esta parábola especificamente a pessoas que "confiavam em si mesmas por serem justas e desprezavam os outros." Era um alerta direto contra a autojustiça religiosa — a crença de que nossa posição diante de Deus depende de nossas realizações morais ou religiosas.</span>
-        <span class="en">Jesus directed this parable specifically at those who "trusted in themselves that they were righteous, and treated others with contempt." It was a direct warning against religious self-righteousness — the belief that our standing before God depends on our moral or religious achievements.</span>
-      </p>
-      <p>
-        <span class="pt">No primeiro século, os fariseus eram vistos como os mais piedosos da sociedade judaica, e os cobradores de impostos eram considerados traidores — colaboradores do sistema romano. Jesus inverteu completamente as expectativas do ouvinte.</span>
-        <span class="en">In the first century, Pharisees were seen as the most devout in Jewish society, and tax collectors were considered traitors — collaborators with the Roman system. Jesus completely reversed the listener's expectations.</span>
-      </p>
-    </div>
-  </div>
+      <div class="exp-block">
+        <div class="exp-block-title">
+          <span class="etag context"><span class="pt">Contexto</span><span class="en">Context</span></span>
+          <span><span class="pt">Por que Jesus contou esta parábola?</span><span class="en">Why did Jesus tell this parable?</span></span>
+        </div>
+        <div class="exp-body">
+          <p>
+            <span class="pt">Jesus dirigiu esta parábola especificamente a pessoas que "confiavam em si mesmas por serem justas e desprezavam os outros." Era um alerta direto contra a autojustiça religiosa — a crença de que nossa posição diante de Deus depende de nossas realizações morais ou religiosas.</span>
+            <span class="en">Jesus directed this parable specifically at those who "trusted in themselves that they were righteous, and treated others with contempt." It was a direct warning against religious self-righteousness — the belief that our standing before God depends on our moral or religious achievements.</span>
+          </p>
+          <p>
+            <span class="pt">No primeiro século, os fariseus eram vistos como os mais piedosos da sociedade judaica, e os cobradores de impostos eram considerados traidores — colaboradores do sistema romano. Jesus inverteu completamente as expectativas do ouvinte.</span>
+            <span class="en">In the first century, Pharisees were seen as the most devout in Jewish society, and tax collectors were considered traitors — collaborators with the Roman system. Jesus completely reversed the listener's expectations.</span>
+          </p>
+        </div>
+      </div>
 
-  <div class="exp-block">
-    <div class="exp-block-title">
-      <span class="etag pharisee"><span class="pt">O Fariseu</span><span class="en">The Pharisee</span></span>
-      <span><span class="pt">O problema da autossuficiência</span><span class="en">The problem of self-sufficiency</span></span>
-    </div>
-    <div class="exp-body">
-      <p>
-        <span class="pt">O texto diz que o fariseu "orava assim consigo mesmo" — uma frase reveladora. Sua oração era, na verdade, um monólogo de autoelógio disfarçado de adoração. Ele não estava falando com Deus; estava falando consigo mesmo diante de Deus.</span>
-        <span class="en">The text says the Pharisee "prayed thus with himself" — a revealing phrase. His prayer was actually a self-congratulatory monologue disguised as worship. He wasn't really talking to God; he was talking to himself in front of God.</span>
-      </p>
-      <p>
-        <span class="pt">Jeju duas vezes por semana e dízimos de tudo? Isso ia além do que a lei exigia. O fariseu era genuinamente disciplinado. O problema não era o que ele fazia, mas o que ele pensava que isso significava: que ele não precisava de graça.</span>
-        <span class="en">Fasting twice a week and tithing everything? That went beyond what the law required. The Pharisee was genuinely disciplined. The problem was not what he did, but what he thought it meant: that he didn't need grace.</span>
-      </p>
-    </div>
-    <div class="insight-box">
-      <div class="i-label"><span class="pt">Ponto-chave</span><span class="en">Key insight</span></div>
-      <p>
-        <span class="pt">A autojustiça não é apenas orgulho — é uma teologia errada. Ela diz: "Deus me deve algo." A oração verdadeira diz o oposto: "Eu devo tudo a Deus."</span>
-        <span class="en">Self-righteousness is not just pride — it is bad theology. It says: "God owes me something." True prayer says the opposite: "I owe everything to God."</span>
-      </p>
-    </div>
-  </div>
+      <div class="exp-block">
+        <div class="exp-block-title">
+          <span class="etag pharisee"><span class="pt">O Fariseu</span><span class="en">The Pharisee</span></span>
+          <span><span class="pt">O problema da autossuficiência</span><span class="en">The problem of self-sufficiency</span></span>
+        </div>
+        <div class="exp-body">
+          <p>
+            <span class="pt">O texto diz que o fariseu "orava assim consigo mesmo" — uma frase reveladora. Sua oração era, na verdade, um monólogo de autoelógio disfarçado de adoração. Ele não estava falando com Deus; estava falando consigo mesmo diante de Deus.</span>
+            <span class="en">The text says the Pharisee "prayed thus with himself" — a revealing phrase. His prayer was actually a self-congratulatory monologue disguised as worship. He wasn't really talking to God; he was talking to himself in front of God.</span>
+          </p>
+          <p>
+            <span class="pt">Jeju duas vezes por semana e dízimos de tudo? Isso ia além do que a lei exigia. O fariseu era genuinamente disciplinado. O problema não era o que ele fazia, mas o que ele pensava que isso significava: que ele não precisava de graça.</span>
+            <span class="en">Fasting twice a week and tithing everything? That went beyond what the law required. The Pharisee was genuinely disciplined. The problem was not what he did, but what he thought it meant: that he didn't need grace.</span>
+          </p>
+        </div>
+        <div class="insight-box">
+          <div class="i-label"><span class="pt">Ponto-chave</span><span class="en">Key insight</span></div>
+          <p>
+            <span class="pt">A autojustiça não é apenas orgulho — é uma teologia errada. Ela diz: "Deus me deve algo." A oração verdadeira diz o oposto: "Eu devo tudo a Deus."</span>
+            <span class="en">Self-righteousness is not just pride — it is bad theology. It says: "God owes me something." True prayer says the opposite: "I owe everything to God."</span>
+          </p>
+        </div>
+      </div>
 
-  <div class="exp-block">
-    <div class="exp-block-title">
-      <span class="etag collector"><span class="pt">O Cobrador</span><span class="en">The Collector</span></span>
-      <span><span class="pt">A oração que justifica</span><span class="en">The prayer that justifies</span></span>
-    </div>
-    <div class="exp-body">
-      <p>
-        <span class="pt">O cobrador de impostos "ficou de pé à distância" — ele sabia que não merecia se aproximar. "Nem mesmo ousava levantar os olhos para o céu" — postura de total indignidade. "Batia no peito" — gesto hebraico de lamentação profunda e arrependimento.</span>
-        <span class="en">The tax collector "stood far off" — he knew he didn't deserve to draw near. He "would not even lift up his eyes to heaven" — a posture of total unworthiness. He "beat his breast" — a Hebrew gesture of deep mourning and repentance.</span>
-      </p>
-      <p>
-        <span class="pt">Sua oração tem apenas sete palavras em grego: "Deus, tem misericórdia de mim, pecador." Sem desculpas. Sem barganha. Sem lista de boas ações. Apenas uma confissão honesta da realidade: ele precisava de misericórdia, e sabia disso.</span>
-        <span class="en">His prayer is only seven words in Greek: "God, be merciful to me, a sinner." No excuses. No bargaining. No list of good deeds. Just an honest confession of reality: he needed mercy, and he knew it.</span>
-      </p>
-    </div>
-  </div>
+      <div class="exp-block">
+        <div class="exp-block-title">
+          <span class="etag collector"><span class="pt">O Cobrador</span><span class="en">The Collector</span></span>
+          <span><span class="pt">A oração que justifica</span><span class="en">The prayer that justifies</span></span>
+        </div>
+        <div class="exp-body">
+          <p>
+            <span class="pt">O cobrador de impostos "ficou de pé à distância" — ele sabia que não merecia se aproximar. "Nem mesmo ousava levantar os olhos para o céu" — postura de total indignidade. "Batia no peito" — gesto hebraico de lamentação profunda e arrependimento.</span>
+            <span class="en">The tax collector "stood far off" — he knew he didn't deserve to draw near. He "would not even lift up his eyes to heaven" — a posture of total unworthiness. He "beat his breast" — a Hebrew gesture of deep mourning and repentance.</span>
+          </p>
+          <p>
+            <span class="pt">Sua oração tem apenas sete palavras em grego: "Deus, tem misericórdia de mim, pecador." Sem desculpas. Sem barganha. Sem lista de boas ações. Apenas uma confissão honesta da realidade: ele precisava de misericórdia, e sabia disso.</span>
+            <span class="en">His prayer is only seven words in Greek: "God, be merciful to me, a sinner." No excuses. No bargaining. No list of good deeds. Just an honest confession of reality: he needed mercy, and he knew it.</span>
+          </p>
+        </div>
+      </div>
 
-  <div class="exp-block">
-    <div class="exp-block-title">
-      <span class="etag meaning"><span class="pt">Significado</span><span class="en">Meaning</span></span>
-      <span><span class="pt">"Voltou para casa justificado"</span><span class="en">"Went down justified"</span></span>
+      <div class="exp-block">
+        <div class="exp-block-title">
+          <span class="etag meaning"><span class="pt">Significado</span><span class="en">Meaning</span></span>
+          <span><span class="pt">"Voltou para casa justificado"</span><span class="en">"Went down justified"</span></span>
+        </div>
+        <div class="exp-body">
+          <p>
+            <span class="pt">"Justificado" em grego (δεδικαιωμένος) significa declarado justo diante de Deus — não por mérito próprio, mas por graça. Jesus estava antecipando o coração do evangelho: somos aceitos por Deus não pelo que fazemos, mas pela nossa dependência dEle.</span>
+            <span class="en">"Justified" in Greek (δεδικαιωμένος) means declared righteous before God — not by personal merit, but by grace. Jesus was foreshadowing the heart of the gospel: we are accepted by God not by what we do, but by our dependence on Him.</span>
+          </p>
+        </div>
+        <div class="insight-box">
+          <div class="i-label"><span class="pt">Princípio eterno</span><span class="en">Eternal principle</span></div>
+          <p>
+            <span class="pt">"Todo aquele que se exaltar será humilhado, e todo aquele que se humilhar será exaltado." — A humildade não é fraqueza; é o único caminho de acesso à graça de Deus.</span>
+            <span class="en">"Everyone who exalts himself will be humbled, but the one who humbles himself will be exalted." — Humility is not weakness; it is the only path of access to God's grace.</span>
+          </p>
+        </div>
+      </div>
     </div>
-    <div class="exp-body">
-      <p>
-        <span class="pt">"Justificado" em grego (δεδικαιωμένος) significa declarado justo diante de Deus — não por mérito próprio, mas por graça. Jesus estava antecipando o coração do evangelho: somos aceitos por Deus não pelo que fazemos, mas pela nossa dependência dEle.</span>
-        <span class="en">"Justified" in Greek (δεδικαιωμένος) means declared righteous before God — not by personal merit, but by grace. Jesus was foreshadowing the heart of the gospel: we are accepted by God not by what we do, but by our dependence on Him.</span>
-      </p>
-    </div>
-    <div class="insight-box">
-      <div class="i-label"><span class="pt">Princípio eterno</span><span class="en">Eternal principle</span></div>
-      <p>
-        <span class="pt">"Todo aquele que se exaltar será humilhado, e todo aquele que se humilhar será exaltado." — A humildade não é fraqueza; é o único caminho de acesso à graça de Deus.</span>
-        <span class="en">"Everyone who exalts himself will be humbled, but the one who humbles himself will be exalted." — Humility is not weakness; it is the only path of access to God's grace.</span>
-      </p>
-    </div>
-  </div>
-</div>
 
-<!-- JAMES PASSAGE -->
-<div class="passage-box fade-in">
-  <div class="passage-head">
-    <div class="passage-head-label">
-      <span class="pt">📖 Tiago 5:13–16 (NVI)</span>
-      <span class="en">📖 James 5:13–16 (ESV)</span>
+    <!-- JAMES PASSAGE -->
+    <div class="passage-box fade-in">
+      <div class="passage-head">
+        <div class="passage-head-label">
+          <span class="pt">📖 Tiago 5:13–16 (NVI)</span>
+          <span class="en">📖 James 5:13–16 (ESV)</span>
+        </div>
+      </div>
+      <div class="passage-body">
+        <div class="bible-text">
+          <span class="pt">
+            <span class="verse-num">13</span>Alguém entre vocês está sofrendo? Que ore. Alguém está alegre? Que cante louvores. <span class="verse-num">14</span>Alguém entre vocês está doente? Que chame os presbíteros da igreja para orar por ele e ungir com azeite em nome do Senhor. <span class="verse-num">15</span>E a oração oferecida com fé salvará o doente; o Senhor o levantará. Se ele tiver pecado, será perdoado. <span class="verse-num">16</span>Portanto, confessem os seus pecados uns aos outros e orem uns pelos outros para que sejam curados. A oração do justo é poderosa e eficaz.
+          </span>
+          <span class="en">
+            <span class="verse-num">13</span>Is anyone among you suffering? Let him pray. Is anyone cheerful? Let him sing praise. <span class="verse-num">14</span>Is anyone among you sick? Let him call for the elders of the church, and let them pray over him, anointing him with oil in the name of the Lord. <span class="verse-num">15</span>And the prayer of faith will save the one who is sick, and the Lord will raise him up. And if he has committed sins, he will be forgiven. <span class="verse-num">16</span>Therefore, confess your sins to one another and pray for one another, that you may be healed. The prayer of a righteous person has great power as it is working.
+          </span>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="passage-body">
-    <div class="bible-text">
-      <span class="pt">
-        <span class="verse-num">13</span>Alguém entre vocês está sofrendo? Que ore. Alguém está alegre? Que cante louvores. <span class="verse-num">14</span>Alguém entre vocês está doente? Que chame os presbíteros da igreja para orar por ele e ungir com azeite em nome do Senhor. <span class="verse-num">15</span>E a oração oferecida com fé salvará o doente; o Senhor o levantará. Se ele tiver pecado, será perdoado. <span class="verse-num">16</span>Portanto, confessem os seus pecados uns aos outros e orem uns pelos outros para que sejam curados. A oração do justo é poderosa e eficaz.
-      </span>
-      <span class="en">
-        <span class="verse-num">13</span>Is anyone among you suffering? Let him pray. Is anyone cheerful? Let him sing praise. <span class="verse-num">14</span>Is anyone among you sick? Let him call for the elders of the church, and let them pray over him, anointing him with oil in the name of the Lord. <span class="verse-num">15</span>And the prayer of faith will save the one who is sick, and the Lord will raise him up. And if he has committed sins, he will be forgiven. <span class="verse-num">16</span>Therefore, confess your sins to one another and pray for one another, that you may be healed. The prayer of a righteous person has great power as it is working.
-      </span>
-    </div>
-  </div>
-</div>
 
-<!-- JAMES EXPLANATION -->
-<div class="explanation fade-in">
-  <div class="exp-title">
-    <span class="pt">Entendendo Tiago 5:13–16</span>
-    <span class="en">Understanding James 5:13–16</span>
-  </div>
-  <div class="exp-subtitle">
-    <span class="pt">A oração em todas as circunstâncias da vida</span>
-    <span class="en">Prayer in every circumstance of life</span>
-  </div>
+    <!-- JAMES EXPLANATION -->
+    <div class="explanation fade-in">
+      <div class="exp-title">
+        <span class="pt">Entendendo Tiago 5:13–16</span>
+        <span class="en">Understanding James 5:13–16</span>
+      </div>
+      <div class="exp-subtitle">
+        <span class="pt">A oração em todas as circunstâncias da vida</span>
+        <span class="en">Prayer in every circumstance of life</span>
+      </div>
 
-  <div class="exp-block">
-    <div class="exp-block-title">
-      <span class="etag context"><span class="pt">Contexto</span><span class="en">Context</span></span>
-      <span><span class="pt">A oração como resposta a tudo</span><span class="en">Prayer as the response to everything</span></span>
-    </div>
-    <div class="exp-body">
-      <p>
-        <span class="pt">Tiago escreveu para cristãos dispersos que enfrentavam perseguição, dificuldades e doença. Sua mensagem é radical: seja qual for a sua situação — sofrimento, alegria, doença, pecado — a resposta é a mesma: oração e comunidade.</span>
-        <span class="en">James wrote to scattered Christians facing persecution, hardship, and illness. His message is radical: whatever your situation — suffering, joy, sickness, sin — the response is the same: prayer and community.</span>
-      </p>
-    </div>
-  </div>
+      <div class="exp-block">
+        <div class="exp-block-title">
+          <span class="etag context"><span class="pt">Contexto</span><span class="en">Context</span></span>
+          <span><span class="pt">A oração como resposta a tudo</span><span class="en">Prayer as the response to everything</span></span>
+        </div>
+        <div class="exp-body">
+          <p>
+            <span class="pt">Tiago escreveu para cristãos dispersos que enfrentavam perseguição, dificuldades e doença. Sua mensagem é radical: seja qual for a sua situação — sofrimento, alegria, doença, pecado — a resposta é a mesma: oração e comunidade.</span>
+            <span class="en">James wrote to scattered Christians facing persecution, hardship, and illness. His message is radical: whatever your situation — suffering, joy, sickness, sin — the response is the same: prayer and community.</span>
+          </p>
+        </div>
+      </div>
 
-  <div class="exp-block">
-    <div class="exp-block-title">
-      <span class="etag meaning"><span class="pt">Versículo 16</span><span class="en">Verse 16</span></span>
-      <span><span class="pt">Confissão mútua e cura</span><span class="en">Mutual confession and healing</span></span>
+      <div class="exp-block">
+        <div class="exp-block-title">
+          <span class="etag meaning"><span class="pt">Versículo 16</span><span class="en">Verse 16</span></span>
+          <span><span class="pt">Confissão mútua e cura</span><span class="en">Mutual confession and healing</span></span>
+        </div>
+        <div class="exp-body">
+          <p>
+            <span class="pt">A confissão mútua não é uma prática clerical reservada ao padre ou pastor — é uma prática comunitária. Tiago chama cada cristão a criar espaço de vulnerabilidade e honestidade uns com os outros. Isso conecta diretamente com o devocional: a oração verdadeira requer admitir a nossa condição, tanto para Deus quanto para a comunidade.</span>
+            <span class="en">Mutual confession is not a clerical practice reserved for priests — it is a community practice. James calls every Christian to create space for vulnerability and honesty with one another. This directly connects to the devotional: true prayer requires admitting our condition, both to God and to the community.</span>
+          </p>
+          <p>
+            <span class="pt">"A oração do justo é poderosa e eficaz" — o "justo" aqui não é o moralmente perfeito, mas aquele que, como o cobrador de impostos, foi justificado pela fé e vive em dependência de Deus.</span>
+            <span class="en">"The prayer of a righteous person has great power" — the "righteous" here is not the morally perfect person, but the one who, like the tax collector, has been justified by faith and lives in dependence on God.</span>
+          </p>
+        </div>
+        <div class="insight-box">
+          <div class="i-label"><span class="pt">Conexão com o devocional</span><span class="en">Connection to the devotional</span></div>
+          <p>
+            <span class="pt">Tiago confirma o que a parábola ensina: a oração eficaz não vem da perfeição, mas da honestidade. Não do orgulho, mas da confissão. Não da força, mas da dependência.</span>
+            <span class="en">James confirms what the parable teaches: effective prayer comes not from perfection, but from honesty. Not from pride, but from confession. Not from strength, but from dependence.</span>
+          </p>
+        </div>
+      </div>
     </div>
-    <div class="exp-body">
-      <p>
-        <span class="pt">A confissão mútua não é uma prática clerical reservada ao padre ou pastor — é uma prática comunitária. Tiago chama cada cristão a criar espaço de vulnerabilidade e honestidade uns com os outros. Isso conecta diretamente com o devocional: a oração verdadeira requer admitir a nossa condição, tanto para Deus quanto para a comunidade.</span>
-        <span class="en">Mutual confession is not a clerical practice reserved for priests — it is a community practice. James calls every Christian to create space for vulnerability and honesty with one another. This directly connects to the devotional: true prayer requires admitting our condition, both to God and to the community.</span>
-      </p>
-      <p>
-        <span class="pt">"A oração do justo é poderosa e eficaz" — o "justo" aqui não é o moralmente perfeito, mas aquele que, como o cobrador de impostos, foi justificado pela fé e vive em dependência de Deus.</span>
-        <span class="en">"The prayer of a righteous person has great power" — the "righteous" here is not the morally perfect person, but the one who, like the tax collector, has been justified by faith and lives in dependence on God.</span>
-      </p>
-    </div>
-    <div class="insight-box">
-      <div class="i-label"><span class="pt">Conexão com o devocional</span><span class="en">Connection to the devotional</span></div>
-      <p>
-        <span class="pt">Tiago confirma o que a parábola ensina: a oração eficaz não vem da perfeição, mas da honestidade. Não do orgulho, mas da confissão. Não da força, mas da dependência.</span>
-        <span class="en">James confirms what the parable teaches: effective prayer comes not from perfection, but from honesty. Not from pride, but from confession. Not from strength, but from dependence.</span>
-      </p>
-    </div>
-  </div>
-</div>
 
-<div class="back-btn-wrap">
-  <button class="back-btn" onclick="showPage('devotional')">
-    ← <span class="pt">Voltar ao Devocional</span><span class="en">Back to Devotional</span>
-  </button>
-</div>
-```
+    <div class="back-btn-wrap">
+      <button class="back-btn" onclick="showPage('devotional')">
+        ← <span class="pt">Voltar ao Devocional</span><span class="en">Back to Devotional</span>
+      </button>
+    </div>
 
   </div>
 </div>
@@ -1235,6 +1226,5 @@ nav { padding: 0 14px; }
     document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
   }
 </script>
-
 </body>
 </html>
